@@ -1,0 +1,16 @@
+version: "2"
+services:
+  dmytro.bukhanets.de:
+    build: .
+    env_file:
+      - /etc/dmytro.bukhanets.de.env
+    environment:
+      - NODE_ENV=production
+    restart: always
+    ports:
+      - "3000:3000"
+    logging:
+      driver: "json-file"
+      options:
+          max-file: "5"
+          max-size: "10m"
