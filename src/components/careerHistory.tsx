@@ -3,7 +3,7 @@ import { careerHistory } from '@/data/objects';
 import { Typography } from '@mui/material';
 import Grid from "@mui/material/Grid";
 import { ReactElement } from 'react';
-import Image from "next/image";
+import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 
 export default function CareerHistory(): ReactElement {
     return (<Grid item container xs={12} md={9} spacing={0} className="career-history">
@@ -20,7 +20,12 @@ export default function CareerHistory(): ReactElement {
             </Grid >
             <Grid item xs={12} className="text-gray-500 courier-font">
                     {step.positionDescription}<br/>
-                    <ul className="text-gray-950 ml-6"><li className="text-gray-950 courier-font">{step.skills.join(', ')}<br/><br/></li></ul>
+                    <ul className="text-gray-950 ml-3"><li className="text-gray-950 courier-font">
+                        <Grid container>
+                            <Grid item><FiberManualRecordIcon sx={{ fontSize: 10 }}/>&nbsp;</Grid>
+                            <Grid item xs>{step.skills.join(', ')}</Grid>
+                        </Grid>
+                    </li></ul>
             </Grid >
         </Grid >))}
     </Grid >);
