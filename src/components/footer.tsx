@@ -1,8 +1,5 @@
-import { personalData } from "../data/objects";
 import { ReactElement } from "react";
-import PrivateInfo from './privateInfo';
 import Grid from "@mui/material/Grid";
-import Link from "next/link";
 import Image from "next/image";
 import { Typography } from "@mui/material";
 

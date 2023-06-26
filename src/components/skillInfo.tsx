@@ -1,9 +1,11 @@
 import { CvSkill, SkillInfoProps } from '@/data/interfaces';
 import { skills } from '@/data/objects';
-import { Breadcrumbs, Link, Typography } from '@mui/material';
+import { Breadcrumbs, Typography } from '@mui/material';
 import Grid from "@mui/material/Grid";
 import { ReactElement } from 'react';
 import HomeIcon from '@mui/icons-material/Home';
+import Link from 'next/link';
+import LinkIcon from '@mui/icons-material/Link';
 
 export default function SkillGroupInfo({ selectedSkillGroupId, selectedSkillId, className }: SkillInfoProps): ReactElement {
     const skillGroup: any = skills.find(sg => sg.title === selectedSkillGroupId);
@@ -17,21 +19,11 @@ export default function SkillGroupInfo({ selectedSkillGroupId, selectedSkillId, 
                 <Grid item xs={12}><br /></Grid>
                 <Grid item xs={12}>
                     <Breadcrumbs aria-label="breadcrumb">
-                        <Link
-                            underline="hover"
-                            sx={{ display: 'flex', alignItems: 'center' }}
-                            color="inherit"
-                            href="/"
-                        >
+                        <Link href="/" >
                             <HomeIcon sx={{ mr: 0.5 }} fontSize="inherit" />
                             Home
                         </Link>
-                        <Link
-                            underline="hover"
-                            sx={{ display: 'flex', alignItems: 'center' }}
-                            color="inherit"
-                            href={`/skills/${selectedSkillGroupId}`}
-                        >
+                        <Link href={`/skills/${selectedSkillGroupId}`} >
                             [ {skillGroup.title} ]
                         </Link>
                         <Typography sx={{ display: 'flex', alignItems: 'center' }} color="text.primary">

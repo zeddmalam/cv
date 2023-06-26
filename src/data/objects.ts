@@ -176,7 +176,9 @@ export const skills: Array<CvSkillGroup> = [
     },
     {
         title: 'PROGR. LANGS.',
-        description: '',
+        description: `In modern programming, programming language is not more than a tool, which software engineer is using during development process. 
+        It happen sfrom time to time that I need develop some feature or debug a part of application in language where i have tiny or no experience at all.
+        You don't need to know a language perfectly to do the task. You just need some limited scope. But there are still languages which i prefer to use on regular basis:`,
         skills: [
             {
                 title: 'NodeJS',
@@ -206,7 +208,17 @@ export const skills: Array<CvSkillGroup> = [
     },
     {
         title: 'DATABASES',
-        description: '',
+        description: `Working with databases involves several basic factors that are essential for effective database management. Here are some key factors to consider:<br/><br/>
+        <strong>Transactions and Concurrency</strong><br/>
+        Transactions ensure the atomicity, consistency, isolation, and durability (ACID) properties of database operations. It involves grouping multiple database operations into a single logical unit and ensuring that they are executed reliably and consistently, even in concurrent environments.<br/><br/>
+        <strong>Scalability and Performance</strong><br/>
+        As the database grows and the workload increases, ensuring scalability and performance becomes vital. This includes techniques such as database partitioning, caching, load balancing, and query optimization to handle large volumes of data and maintain acceptable response times.<br/><br/>
+        <strong>Backup and Recovery</strong><br/>
+        Implementing regular backups and recovery procedures is crucial for data protection. This involves creating backups of the database at specified intervals and having strategies in place to restore the database in case of data loss or system failures.<br/><br/>
+        <strong>Data Security</strong><br/>
+        Data security involves protecting sensitive information from unauthorized access, modification, or disclosure. It includes implementing access control mechanisms, encryption, and other security measures to safeguard the database and its contents.<br/><br/>
+        Here is a list of databases i used to work on a most frequent base: <br/>
+        `,
         skills: [
             {
                 title: 'Postgres',
@@ -230,6 +242,10 @@ export const skills: Array<CvSkillGroup> = [
             },
             {
                 title: 'Redis',
+                description: ''
+            },
+            {
+                title: 'Elastic Search',
                 description: ''
             },
         ]

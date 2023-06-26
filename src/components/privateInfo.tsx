@@ -7,7 +7,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import SmartphoneIcon from '@mui/icons-material/Smartphone';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { SxProps, Theme } from '@mui/material/styles';
-import Image from "next/image";
+import LinkIcon from '@mui/icons-material/Link';
 import Link from "next/link";
 
 interface PrivateInfoProps {
@@ -24,7 +24,7 @@ export default function PrivateInfo(props: PrivateInfoProps): ReactElement {
         </Grid>
         <Grid item container className="private-info" xs={12} sm={6} md={5} alignItems="center">
             <Grid item><LanguageIcon className="icon" /></Grid>
-            <Grid item xs className="private-info-value"><Link href={website.url || '#'}>{website.value}</Link></Grid>
+            <Grid item xs className="private-info-value"><Link href={website.url || '#'}>{website.value}</Link>&nbsp;<LinkIcon/></Grid>
         </Grid>
         <Grid item container className="private-info" xs={12} sm={6} md={3} alignItems="center">
             <Grid item><HomeIcon className="icon" /></Grid>
@@ -32,11 +32,11 @@ export default function PrivateInfo(props: PrivateInfoProps): ReactElement {
         </Grid>
         <Grid item container className="private-info" xs={12} sm={6} md={4} alignItems="center">
             <Grid item><GitHubIcon className="icon" /></Grid>
-            <Grid item xs className="private-info-value"><a href={github.url || '#'}>{github.value}</a></Grid>
+            <Grid item xs className="private-info-value"><Link href={github.url || '#'}>{github.value}</Link>&nbsp;<LinkIcon/></Grid>
         </Grid>
         <Grid item container className="private-info" xs={12} sm={6} md={5} alignItems="center">
             <Grid item><AlternateEmailIcon className="icon" /></Grid>
-            <Grid item xs className="private-info-value"><a href={email.url || '#'}>{email.value}</a></Grid>
+            <Grid item xs className="private-info-value"><Link href={email.url || '#'}>{email.value}</Link>&nbsp;<LinkIcon/></Grid>
         </Grid>
         <Grid item container className="private-info" xs={12} sm={6} md={3} alignItems="center">
             <Grid item sx={{ margin: '0.25em' }}><div className="icon-image"></div></Grid>

@@ -1,9 +1,11 @@
-import { CvSkill, CvSkillGroup, SkillInfoProps } from '@/data/interfaces';
+import { CvSkill, SkillInfoProps } from '@/data/interfaces';
 import { skills } from '@/data/objects';
-import { Breadcrumbs, Link, Paper, Typography } from '@mui/material';
+import { Breadcrumbs, Typography } from '@mui/material';
 import Grid from "@mui/material/Grid";
 import { ReactElement } from 'react';
 import HomeIcon from '@mui/icons-material/Home';
+import Link from 'next/link';
+import LinkIcon from '@mui/icons-material/Link';
 
 export default function SkillGroupInfo({ selectedSkillGroupId, className }: SkillInfoProps): ReactElement {
     const skillGroup: any = skills.find(sg => sg.title === selectedSkillGroupId);
@@ -14,18 +16,11 @@ export default function SkillGroupInfo({ selectedSkillGroupId, className }: Skil
                 <Grid item xs={12}><br /></Grid>
                 <Grid item xs={12}>
                     <Breadcrumbs aria-label="breadcrumb">
-                        <Link
-                            underline="hover"
-                            sx={{ display: 'flex', alignItems: 'center' }}
-                            color="inherit"
-                            href="/"
-                        >
-                            <HomeIcon sx={{ mr: 0.5 }} fontSize="inherit" />
+                        <Link href="/">
+                            <HomeIcon sx={{ mr: '0.5rem', mt: '-0.1rem' }} fontSize="inherit" />
                             Home
                         </Link>
-                        <Typography sx={{ display: 'flex', alignItems: 'center' }} color="text.primary">
-                            [ {skillGroup.title} ]
-                        </Typography>
+                        <Typography sx={{ display: 'flex', alignItems: 'center' }} color="text.primary">{skillGroup.title}</Typography>
                     </Breadcrumbs>
                 </Grid>
                 <Grid item xs={12}><br /></Grid>
@@ -34,8 +29,14 @@ export default function SkillGroupInfo({ selectedSkillGroupId, className }: Skil
                     <ul className="mt-3 mb-10 ml-6">
                         {skillGroup.skills.map((skill: CvSkill): ReactElement<any, any> => (
                             <li key={`skill-${skill.title}`} ><Grid item container>
-                                <Grid item xs={skill.level ? 6 : 12}><Link href={`/skills/${skillGroup.title}/${skill.title}`}><Typography align="left">{skill.title}</Typography></Link></Grid>
-                                {skill.level ? (<Grid item xs={6}><Link href={`/skills/${skillGroup.title}/${skill.title}`}><Typography align="right">{skill.level}</Typography></Link></Grid>) : null}
+                                {skill.description ? (<>
+                                    <Grid item><LinkIcon sx={{ fontSize: 16, mt: '-0.1rem', mr: '1rem' }}/></Grid>
+                                    <Grid item xs={skill.level ? 6 : 11}><Link href={`/skills/${skillGroup.title}/${skill.title}`}><Typography align="left" className="courier-font"><strong>{skill.title}</strong></Typography></Link></Grid>
+                                    {skill.level ? (<Grid item xs={5}><Link href={`/skills/${skillGroup.title}/${skill.title}`}><Typography align="right" className="courier-font"><strong>{skill.level}</strong></Typography></Link></Grid>) : null}
+                               </>) : (<>
+                                    <Grid item xs={skill.level ? 6 : 12}><Typography align="left" className="courier-font">{skill.title}</Typography></Grid>
+                                    {skill.level ? (<Grid item xs={6}><Typography align="right" className="courier-font">{skill.level}</Typography></Grid>) : null}
+                               </>)}
                             </Grid></li>
                         ))}
                     </ul>
