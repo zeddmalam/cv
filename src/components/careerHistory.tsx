@@ -8,7 +8,6 @@ import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 export default function CareerHistory(): ReactElement {
     return (<Grid item container xs={12} md={9} spacing={0} className="career-history">
         <Grid item container xs={12} spacing={0}><Typography className="text-gray-950">[ CAREER HISTORY ]</Typography></Grid >
-        <Grid item container xs={12} spacing={0}><br/></Grid >
         {careerHistory.reverse().map((step: CvCareerStep, index: number): ReactElement<any, any> => (<Grid item key={`career-step-${index}`} container xs={12} spacing={0} className="career-step">
             <Grid item container xs={12} spacing={1} alignItems="center">
                 <Grid item>
