@@ -42,11 +42,11 @@ Open [http://localhost:3000](http://localhost:3000) with your browser.
 ## Deploy
 
 ```bash
-cd /home/node/dmytro-bukhanets-de/ && git pull && docker-compose build && cd /home/node/nginx-reverse-proxy docker-compose down -d container1 && docker-compose up -d container1
+cd /home/node/dmytro-bukhanets-de/ && git pull && docker-compose build && cd /home/node/nginx-reverse-proxy docker-compose down && docker-compose up -d
 ```
 
 ## Restart container
 
 ```bash
-cd /home/node/nginx-reverse-proxy docker-compose down -d container1 && docker-compose up -d container1
+cd /home/node/nginx-reverse-proxy docker-compose down && docker-compose up -d
 ```
