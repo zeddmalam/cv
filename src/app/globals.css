@@ -168,7 +168,7 @@ li {
 }
 
 .courier-font {
-    font-family: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace;
+    font-family: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace !important;
 }
 
 .summary .position-name {
@@ -222,52 +222,46 @@ li {
 }
 
 .career-step {
-    margin-left: 1em;
+    margin-left: 1em !important;
     padding-left: 2.4em;
     border-left: solid 0.2em black;
 }
-
-.career-step {
-    margin-left: 0;
-    padding-left: 0;
-    border-left: none;
-}
 .career-step:last-child {
-    margin-left: 0;
-    padding-left: 0;
-    border-left: none;
+    margin-left: 1em !important;
+    padding-left: 2.4em;
+    border-left: solid 0.2em rgb(0, 0, 0, 0);
 }
 .career-step .clock {
-    display: none;
+    display: block;
+    position: absolute;
     width: 2.3em;
     height: 2.3em;
-    margin-left: 0;
-    margin-top: 0;
+    margin-left: -3.65em;
+    margin-top: -0.55em;
     background-image: url(/img/clock.png);
     background-position: center;
     background-size:cover;
 }
 
-@media only screen and (min-width: 1024px){
+@media only screen and (max-width: 1024px){
     .career-step {
-        margin-left: 1em;
-        padding-left: 2.4em;
-        border-left: solid 0.2em black;
+        margin-left: 0;
+        padding-left: 0;
+        border-left: none;
     }
     .career-step:last-child {
-        margin-left: 1em;
-        padding-left: 2.4em;
-        border-left: solid 0.2em rgb(0, 0, 0, 0);
+        margin-left: 0;
+        padding-left: 0;
+        border-left: none;
     }
     .career-step .clock {
-        display: block;
-        position: absolute;
+        display: none;
         width: 2.3em;
         height: 2.3em;
-        margin-left: -3.65em;
-        margin-top: -0.55em;
+        margin-left: 0;
+        margin-top: 0;
         background-image: url(/img/clock.png);
         background-position: center;
         background-size:cover;
     }
-}
+    }

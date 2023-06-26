@@ -20,7 +20,7 @@ export default function SkillsInfo({ selectedSkillGroupId, selectedSkillId, sx }
                 <ul className="mt-3 mb-10 ml-5">
                     {skillGroup.skills.map((skill: CvSkill): ReactElement<any, any> => (
                         <li key={`skill-${skill.title}`} className={selectedSkillId === skill.title ? ' current-page-link' : ''}>
-                            <Grid container xs={12}>
+                            <Grid container>
                                 {skill.description ? (<>
                                     <Grid item xs={1}><LinkIcon sx={{ fontSize: 16, marginTop: '-0.25rem' }}/></Grid>
                                     <Grid item xs={skill.level ? 6 : 11}><Link href={`/skills/${skillGroup.title}/${skill.title}`}><Typography align="left" className="courier-font">{skill.title}</Typography></Link></Grid>

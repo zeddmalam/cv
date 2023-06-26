@@ -2,8 +2,6 @@ version: "2"
 services:
   dmytro.bukhanets.de:
     build: .
-    env_file:
-      - /etc/dmytro.bukhanets.de.env
     environment:
       - NODE_ENV=production
     restart: always

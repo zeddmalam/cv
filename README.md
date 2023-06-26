@@ -2,12 +2,19 @@
 
 ## Prerequisites
 
-Env file should be created: `/etc/dmytro.bukhanets.de.env`
+Env file should be created: `.env.local` with vars:
+
+```
+NEXT_PUBLIC_PERSONAL_DATA_PHONE=
+NEXT_PUBLIC_PERSONAL_DATA_ADDRESS=
+NEXT_PUBLIC_PERSONAL_DATA_EMAIL=
+NEXT_PUBLIC_PERSONAL_DATA_BIRTHDAY=
+```
 
 ## Local start
 
 ```bash
-DOTENV=/etc/dmytro.bukhanets.de.env npm run dev
+npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser.

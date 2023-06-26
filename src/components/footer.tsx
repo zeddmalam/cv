@@ -10,7 +10,7 @@ export default function Footer(): ReactElement {
             <Grid item container xs={12} md={9} sx={{ padding:1, backgroundColor: '#ffffff'}}></Grid>
         </Grid>
         <Grid item className="summary no-margin text-gray-950" xs={12} md={3}>
-            <Typography align="center">[ HOBBIES ]</Typography>
+            <Typography align="center"><br/>[ HOBBIES ]<br/><br/></Typography>
         </Grid>
         <Grid item container className="summary no-margin" xs={12} md={9} spacing={0} sx={{padding:1}}
             direction="row"
@@ -24,7 +24,7 @@ export default function Footer(): ReactElement {
             <Grid item xs={2}><div className="hobby" style={{marginTop: '-3rem'}}><Image src="/img/hobby_4.png" alt={""} width="100" height="100" /></div></Grid>
             <Grid item xs={2}><div className="hobby" style={{marginTop: '-3.5rem'}}><Image src="/img/hobby_5.png" alt={""} width="100" height="100" /></div></Grid>
         </Grid>
-        <Grid item xs={12} md={3} className="sidebar"><br/><br/><br/></Grid>
+        <Grid item xs={12} md={3} className="sidebar"><br/><br/></Grid>
         <Grid item container xs={12} md={9} sx={{ padding:1, backgroundColor: '#ffffff'}}></Grid>
     </Grid >
     );
