@@ -3,7 +3,7 @@ FROM node:18-alpine AS builder
 WORKDIR /app
 COPY package.json package-lock.json ./
 RUN npm ci
-COPY .eslintrc.json next-env.d.ts next.config.js postcss.config.js tailwind.config.js tsconfig.json ./
+COPY .eslintrc.json next.config.js postcss.config.js tailwind.config.js tsconfig.json ./
 COPY .env.local ./
 COPY public public
 COPY src src
