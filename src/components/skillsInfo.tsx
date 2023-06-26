@@ -6,11 +6,8 @@ import Link from 'next/link';
 import { ReactElement } from 'react';
 import LinkIcon from '@mui/icons-material/Link';
 
-export default function SkillsInfo({ selectedSkillGroupId, selectedSkillId, sx }: SkillInfoProps) {
-    return (<Grid item container className="sidebar" xs={12} md={3} sx={{
-        ...sx,
-        padding: { sm: 1, md: 3 }
-    }}>
+export default function SkillsInfo({ selectedSkillGroupId, selectedSkillId }: SkillInfoProps) {
+    return (<Grid item container className="sidebar" xs={12} md={3} >
         {skills.map((skillGroup: CvSkillGroup): ReactElement<any, any> => (<Grid item container xs={12} sm={6} md={12} spacing={1} key={`skill-group-${skillGroup.title}`}>
         {skillGroup.description ? 
             (<Grid item xs={12}><Typography className={`skill-group${selectedSkillGroupId === skillGroup.title && !selectedSkillId ? ' current-page-link' : ''}`}><LinkIcon sx={{ fontSize: 16 }}/>&nbsp;<Link href={`/skills/${skillGroup.title}`}>[ {skillGroup.title} ]</Link></Typography></Grid>) : 

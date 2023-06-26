@@ -31,11 +31,11 @@ export default function SkillGroupInfo({ selectedSkillGroupId, className }: Skil
                             <li key={`skill-${skill.title}`} ><Grid item container>
                                 {skill.description ? (<>
                                     <Grid item><LinkIcon sx={{ fontSize: 16, mt: '-0.1rem', mr: '1rem' }}/></Grid>
-                                    <Grid item xs={skill.level ? 6 : 11}><Link href={`/skills/${skillGroup.title}/${skill.title}`}><Typography align="left" className="courier-font"><strong>{skill.title}</strong></Typography></Link></Grid>
-                                    {skill.level ? (<Grid item xs={5}><Link href={`/skills/${skillGroup.title}/${skill.title}`}><Typography align="right" className="courier-font"><strong>{skill.level}</strong></Typography></Link></Grid>) : null}
+                                    <Grid item xs><Link href={`/skills/${skillGroup.title}/${skill.title}`}><Typography align="left" className="courier-font"><strong>{skill.title}</strong></Typography></Link></Grid>
+                                    {skill.level ? (<Grid item><Link href={`/skills/${skillGroup.title}/${skill.title}`}><Typography align="right" className="courier-font"><strong>{skill.level}</strong></Typography></Link></Grid>) : null}
                                </>) : (<>
-                                    <Grid item xs={skill.level ? 6 : 12}><Typography align="left" className="courier-font">{skill.title}</Typography></Grid>
-                                    {skill.level ? (<Grid item xs={6}><Typography align="right" className="courier-font">{skill.level}</Typography></Grid>) : null}
+                                    <Grid item xs><Typography align="left" className="courier-font">{skill.title}</Typography></Grid>
+                                    {skill.level ? (<Grid item><Typography align="right" className="courier-font">{skill.level}</Typography></Grid>) : null}
                                </>)}
                             </Grid></li>
                         ))}

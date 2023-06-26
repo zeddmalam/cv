@@ -124,9 +124,26 @@ body {
 
 .sidebar {
     font-family: 'lxjw-n4';
-    /*adding: 0.5em 1em;*/
+    padding: 3rem;
     color: #5F5E5E;
     background-color: #D5D5D5;
+}
+
+.career-history {
+    padding: 3rem;
+}
+
+@media only screen and (max-width: 1024px){
+    .sidebar {
+        font-family: 'lxjw-n4';
+        padding: 0.5rem;
+        color: #5F5E5E;
+        background-color: #D5D5D5;
+    }
+
+    .career-history {
+        padding: 0.5rem;
+    }
 }
 
 .current-page-link {
@@ -264,4 +281,4 @@ li {
         background-position: center;
         background-size:cover;
     }
-    }
+}

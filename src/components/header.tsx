@@ -24,9 +24,9 @@ export default function Header(): ReactElement {
             </Grid>
         </Grid>
         <Grid item container xs={12} md={9} sx={{ display: { xs: "flex", md: "none" }, padding:1, backgroundColor: '#ffffff'}}><PrivateInfo personalData={personalData}/></Grid>
-        <Grid item container spacing={0} xs={12}>
+        <Grid item container spacing={0} xs={12} sx={{ display: { xs: "none", md: "flex" } }}>
             <Grid item className="sidebar" xs={12} md={3}></Grid>
-            <Grid item className="private-info" xs={12} md={9} sx={{ display: { xs: "none", md: "flex" } }}><br/><br/></Grid>
+            <Grid item className="private-info" xs={12} md={9}><br/><br/></Grid>
         </Grid>
     </Grid >
     );

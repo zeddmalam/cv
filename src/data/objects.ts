@@ -105,7 +105,7 @@ export const personalData: PersonalData = {
     github: {
         value: 'github.com/zeddmalam',
         category: 'Github',
-        url: 'https://github.com/zeddmalam'
+        url: 'https://github.com/zeddmalam/cv'
     },
     email: {
         value: NEXT_PUBLIC_PERSONAL_DATA_EMAIL ?? '',
