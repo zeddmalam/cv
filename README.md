@@ -42,11 +42,11 @@ Open [http://localhost:3000](http://localhost:3000) with your browser.
 ## Deploy
 
 ```bash
-cd /home/node/dmytro.bukhanets.de/ && git pull && docker-compose build && docker-compose up -d dmytro.bukhanets.de
+cd /home/node/dmytro-bukhanets-de/ && git pull && docker-compose build && docker-compose up -d dmytro-bukhanets-de
 ```
 
 ## Restart container
 
 ```bash
-cd /home/node/dmytro.bukhanets.de/ && docker-compose down && docker-compose up -d dmytro.bukhanets.de
+cd /home/node/dmytro-bukhanets-de/ && docker-compose down && docker-compose up -d dmytro-bukhanets-de
 ```
