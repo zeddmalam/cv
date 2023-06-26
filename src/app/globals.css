@@ -7,7 +7,8 @@
 
     --private-text-size: 1.25em;
     --background-color: #ffffff;
-    --personal-data-color: #868F8B;
+    --text-color: #868F8B;
+    --text-darker-color: #5F5E5E;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -48,7 +49,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1rem;
     background-color: var(--background-color);
-    color: var(--personal-data-color);
+    color: var(--text-color);
 }
 
 .personal-data > * {
@@ -124,20 +125,20 @@ body {
 
 .sidebar {
     font-family: 'lxjw-n4';
-    padding: 3rem;
-    color: #5F5E5E;
+    padding: 0.5rem 1rem;
+    color: var(--text-darker-color);
     background-color: #D5D5D5;
 }
 
 .career-history {
-    padding: 3rem;
+    padding: 0.5rem 1rem;
 }
 
 @media only screen and (max-width: 1024px){
     .sidebar {
         font-family: 'lxjw-n4';
         padding: 0.5rem;
-        color: #5F5E5E;
+        color:  var(--text-darker-color);
         background-color: #D5D5D5;
     }
 
@@ -181,7 +182,7 @@ li {
 }
 
 .skill-group {
-    color: #000000;
+    color: var(--text-darker-color);
 }
 
 .courier-font {
@@ -198,7 +199,7 @@ li {
 .private-info {
     /*padding-left: 0.5em;*/
     background-color: #ffffff;
-    color: #868F8B;
+    color: var(--text-color);
     font-family: lxjw-n4, adobe-notdef;
     font-weight: 400;
     font-size: var(--private-text-size);
@@ -227,7 +228,7 @@ li {
     /*min-width: 800px;*/
     display: block;
     float: left;
-    color: #868F8B;
+    color: var(--text-color);
     font-family: lxjw-n4, adobe-notdef;
     font-weight: 400;
     /*font-size: 20px;*/

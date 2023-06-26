@@ -14,7 +14,7 @@ WORKDIR /app
 COPY --from=builder /app/package.json /app/package-lock.json ./
 COPY --from=builder /app/.next ./.next
 COPY --from=builder /app/public ./public
-RUN npm ci --production
+RUN npm ci --omit=dev
 
 EXPOSE 3000
 

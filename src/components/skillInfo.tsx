@@ -13,19 +13,16 @@ export default function SkillGroupInfo({ selectedSkillGroupId, selectedSkillId, 
 
     const skill: any = skillGroup.skills.find((s: CvSkill) => s.title === selectedSkillId);
     if (!skill) return (<Typography className="skill-group">Skill {selectedSkillId} is not found</Typography>);
-    return (<Grid item container xs={12} md={9} spacing={0} className={`pl-5 pr-5 skill-group ${className ? className : ''}`}>
+    return (<Grid item container xs={12} md={9} spacing={0} className={`career-history ${className ? className : ''}`}>
         <div>
             <Grid container xs={12}>
-                <Grid item xs={12}><br /></Grid>
                 <Grid item xs={12}>
                     <Breadcrumbs aria-label="breadcrumb">
                         <Link href="/" >
                             <HomeIcon sx={{ mr: 0.5 }} fontSize="inherit" />
                             Home
                         </Link>
-                        <Link href={`/skills/${selectedSkillGroupId}`} >
-                            [ {skillGroup.title} ]
-                        </Link>
+                        <Link href={`/skills/${selectedSkillGroupId}`} >{skillGroup.title}</Link>
                         <Typography sx={{ display: 'flex', alignItems: 'center' }} color="text.primary">
                             {skill.title} {skill.level ? `(${skill.level})` : null}
                         </Typography>

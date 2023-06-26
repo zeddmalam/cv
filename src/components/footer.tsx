@@ -6,7 +6,7 @@ import { Typography } from "@mui/material";
 export default function Footer(): ReactElement {
     return (<Grid container item xs={12} sx={{ display: { xs: "none", md: "flex" }}}>
         <Grid item container xs={12}>
-            <Grid item xs={12} md={3} className="sidebar"><br/><br/><br/></Grid>
+            <Grid item xs={12} md={3} className="sidebar"><br/></Grid>
             <Grid item container xs={12} md={9} sx={{ padding:1, backgroundColor: '#ffffff'}}></Grid>
         </Grid>
         <Grid item className="summary no-margin text-gray-950" xs={12} md={3}>
